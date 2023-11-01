@@ -1,7 +1,7 @@
 {
-  "name": "placeholder",
+  "name": "Shopper",
   "version": "1.0.0",
-  "description": "Placeholder description",
+  "description": "App for listing items",
   "main": "app.js",
   "scripts": {
     "build": "webpack",

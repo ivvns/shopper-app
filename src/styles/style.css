@@ -1,3 +1,39 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    @apply flex flex-col items-center m-0 h-screen bg-yellow-50;
+}
+
+form {
+    @apply shadow-md shadow-gray-400 max-w-full ;
+    width: 300px;
+}
+
+.input {
+    @apply block p-4 w-full text-lg;
+    border: none;
+}
+
+.filter-form {
+    @apply px-4 py-2 my-2 bg-white;
+    width: 300px;
+}
+
+.filter-form input {
+    @apply w-full text-sm;
+}
+
+.items {
+    @apply bg-white shadow-md shadow-gray-400;
+    width: 300px;
+}
+
+.items li {
+    @apply border-t cursor-pointer p-4 text-sm flex justify-between;
+}
+
+.clear-btn {
+    @apply bg-gray-600  text-xs text-white p-3 mt-6 shadow-md shadow-gray-400;
+}

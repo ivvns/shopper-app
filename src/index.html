@@ -4,9 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
+    <h1 class="text-5xl font-semibold pt-28 pb-10 text-teal-800 opacity-50">Shopper</h1>
+    <form id="form">
+        <input type="text" class="input" id="input" placeholder="Enter an item" autocomplete="off">
+    </form>
 
+    <div class="filter-form">
+        <input type="text" id="filter" class="input-form-filter" placeholder="Looking for something?">
+    </div>
+
+    <ul class="items" id="items">
+        <li>Potato <button> <i class="fa-solid fa-x text-red-600"></i></button></li>
+        <li>Potato <button> <i class="fa-solid fa-x text-red-600"></i></button></li>
+    </ul>
+
+    <div>
+        <button id="clear" class="clear-btn">Clear all <i class="fa-solid fa-trash text-white"></i></button>
+    </div>
 </body>
 </html>
