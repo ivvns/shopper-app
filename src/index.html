@@ -11,17 +11,16 @@
 </head>
 <body>
     <h1 class="text-5xl font-semibold pt-28 pb-10 text-teal-800 opacity-50">Shopper</h1>
-    <form id="form">
-        <input type="text" class="input" id="input" placeholder="Enter an item" autocomplete="off">
+    <form id="item-form">
+        <input type="text" class="input" id="item-input" placeholder="Enter an item" autocomplete="off">
     </form>
 
     <div class="filter-form">
         <input type="text" id="filter" class="input-form-filter" placeholder="Looking for something?">
     </div>
 
-    <ul class="items" id="items">
-        <li>Potato <button> <i class="fa-solid fa-x text-red-600"></i></button></li>
-        <li>Potato <button> <i class="fa-solid fa-x text-red-600"></i></button></li>
+    <ul class="items" id="item-list">
+        <li>Potato <button class="remove-item item-btn"><i class="fa-solid fa-x"></i></button></li>
     </ul>
 
     <div>

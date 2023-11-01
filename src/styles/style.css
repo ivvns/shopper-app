@@ -34,6 +34,14 @@ form {
     @apply border-t cursor-pointer p-4 text-sm flex justify-between;
 }
 
+.item-btn {
+    @apply text-red-500;
+}
+
+.remove-item {
+    
+}
+
 .clear-btn {
     @apply bg-gray-600  text-xs text-white p-3 mt-6 shadow-md shadow-gray-400;
 }
