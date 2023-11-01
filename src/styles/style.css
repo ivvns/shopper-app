@@ -16,13 +16,10 @@ form {
     border: none;
 }
 
-.filter-form {
-    @apply px-4 py-2 my-2 bg-white;
-    width: 300px;
-}
 
 .filter-form input {
-    @apply w-full text-sm;
+    @apply w-full text-sm px-4 py-2 my-2;
+    width: 300px
 }
 
 .items {
