@@ -65,6 +65,24 @@ function clearItems() {
     resetUI();
 }
 
+// Filter items
+function filterItems(e) {
+    const items = document.querySelectorAll('li');
+    const text = e.target.value.toLowerCase();
+    
+    // Loop through each item
+    items.forEach(item => {
+        const itemName = item.firstChild.textContent.toLowerCase();
+        
+        // Check to see if typed text matches item name
+        if(itemName.indexOf(text) != -1) {    
+            item.style.display = 'flex';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
 // Reset state of UI
 function resetUI() {
     const items = document.querySelectorAll('li');
@@ -81,5 +99,6 @@ function resetUI() {
 itemForm.addEventListener('submit', addItem);
 itemList.addEventListener('click', removeItem);
 clearBtn.addEventListener('click', clearItems);
+itemFilter.addEventListener('input', filterItems);
 
 resetUI();
