@@ -31,15 +31,11 @@ form {
 }
 
 .items li {
-    @apply border-t cursor-pointer p-4 text-sm flex justify-between;
+    @apply border-t cursor-pointer p-4 text-sm flex justify-between items-center;
 }
 
 .item-btn {
-    @apply text-red-500;
-}
-
-.remove-item {
-    
+    @apply text-red-500 p-1;
 }
 
 .clear-btn {
