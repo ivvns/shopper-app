@@ -1,4 +1,4 @@
-# Shopping list app where users are able to add, edit, and delete items.
+# Shopping list app
 
 Built with Vanilla JS and TailwindCSS
 
