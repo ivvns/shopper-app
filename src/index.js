@@ -24,6 +24,16 @@ function onAddItemSubmit(e) {
         return;
     }   
 
+    // Check for edit mode
+    if (isEditMode) {
+        const itemToEdit = itemList.querySelector('.edit-mode');
+
+        removeItemFromStorage(itemToEdit.textContent);
+        itemToEdit.classList.remove('edit-mode');
+        itemToEdit.remove();
+        isEditMode = false;
+    }
+
     // Create item DOM element
     addItemToDOM(newItem);
 
@@ -161,6 +171,10 @@ function resetUI() {
         clearBtn.style.display = 'block';
         itemFilter.style.display = 'block';
     }
+
+    itemInput.classList.remove('form-edit');
+
+    isEditMode = false;
 }
 
 // Initialize app
