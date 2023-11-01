@@ -6,6 +6,7 @@ const itemInput = document.getElementById('item-input');
 const itemList = document.getElementById('item-list');
 const clearBtn = document.getElementById('clear');
 const itemFilter = document.getElementById('filter');
+let isEditMode = false;
 
 function displayItems() {
     const itemsFromStorage = getItemsFromStorage();
@@ -87,7 +88,19 @@ function getItemsFromStorage() {
 function onClickItem(e) {
     if (e.target.parentElement.classList.contains('remove-item')) {
         removeItem(e.target.parentElement.parentElement);
+    } else {
+        setItemToEdit(e.target);
     }
+}
+
+function setItemToEdit(item) {
+    isEditMode = true;
+
+    itemList.querySelectorAll('li').forEach(item => item.classList.remove('edit-mode'));
+
+    item.classList.add('edit-mode');
+    itemInput.value = item.textContent;
+    itemInput.classList.add('form-edit');
 }
 
 function removeItem(item) {
